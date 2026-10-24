@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seyed Yousuf | MBA Finance & Logistics Portfolio</title>
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@600;700;800&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07090c;--card:#0c0f14;--ink:#f4efe6;--mute:#b9b3a7;--gold:#e9b45c;--line:rgba(233,180,92,.55);--hero-fade:rgba(7,9,12,.92)}
+:root[data-theme=light]{--bg:#faf6ee;--card:#fff;--ink:#17130b;--mute:#5d5547;--gold:#a8741a;--line:rgba(168,116,26,.5);--hero-fade:rgba(250,246,238,.93)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 'DM Sans',sans-serif}
+h1,h2,h3{font-family:Outfit,sans-serif;line-height:1.1}
+a{color:inherit;text-decoration:none}
+.script{font-family:'Dancing Script',cursive;color:var(--gold)}
+.g{color:var(--gold)}
+header{position:fixed;inset:0 0 auto;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;background:var(--bg);border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:14px;font:500 15px Outfit;letter-spacing:.3em}
+.logo img{width:50px;height:50px;border-radius:50%;display:block}footer .logo img{width:40px;height:40px}
+nav{display:flex;gap:28px;font-size:15px}
+nav a{padding:6px 0;border-bottom:2px solid transparent}
+nav a.on{color:var(--gold);border-color:var(--gold)}
+button{font:inherit;color:inherit;cursor:pointer}
+#theme,#menu{background:none;border:0;font-size:22px;color:var(--gold)}
+#menu{display:none}
+#fx{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+section,footer{position:relative;z-index:1}
+section{padding:110px 5vw 70px;position:relative}
+.wrap{max-width:1200px;margin:auto}
+.eyebrow{color:var(--gold);letter-spacing:.2em;font-size:13px;font-weight:700;display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.eyebrow:after{content:"";width:90px;height:1px;background:var(--gold)}
+h2{font-size:clamp(34px,5vw,56px);margin-bottom:16px}
+.lead{max-width:60ch;color:var(--mute)}
+.banner{position:absolute;inset:0 0 auto auto;width:min(62%,900px);height:100%;max-height:520px;background:url(port.jpg) center/cover;z-index:0;-webkit-mask-image:linear-gradient(to right,transparent,#000 45%);mask-image:linear-gradient(to right,transparent,#000 45%)}
+section .wrap{position:relative;z-index:1}
+#about .banner{background-image:url(bg-about.jpg)}
+#skills .banner{background-image:url(bg-skills.jpg)}
+#internship .banner{background:url(bg-internship.png) right 4% center/contain no-repeat}
+#certificates .banner{background-image:url(bg-certificates.jpg)}
+#contact .banner{background-image:url(bg-contact.jpg)}
+.shot{width:100%;height:190px;object-fit:cover;border-radius:10px;margin-bottom:14px;border:1px solid var(--line);background:#fff;display:block}.shot.c{object-fit:contain}
+.ij{display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:start}.thumb{width:160px;height:160px;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+.d{margin-top:6px}.d b{color:var(--ink);font-weight:600}.skl{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.btn{display:inline-block;background:var(--gold);color:#17130b;padding:14px 26px;border-radius:8px;font-weight:700;border:0}
+.btn.o{background:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:10px 22px}
+#home{min-height:100vh;display:flex;align-items:center;overflow:hidden;padding-top:90px}
+#home .banner{width:58%;max-height:none;background:url(hero.jpg) center 30%/cover;-webkit-mask-image:linear-gradient(to right,transparent,#000 35%);mask-image:linear-gradient(to right,transparent,#000 35%)}
+#home:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--bg) 78%,transparent) 25%,transparent 65%);z-index:1}
+#home .wrap>div{max-width:min(580px,50vw)}#home .wrap{max-width:none;margin:0;display:grid;grid-template-columns:1fr;gap:30px;align-items:center;z-index:2}
+#home h1{font-size:clamp(44px,8vw,96px);font-weight:800;letter-spacing:-.02em}
+#home .sub{font:500 20px Outfit;margin:10px 0 18px}
+.tag{display:inline-block;margin:18px 8px 0 0;padding:7px 16px;border:1px solid var(--line);border-radius:999px;font-size:13px}
+.tagline{text-shadow:0 2px 14px #000,0 0 4px #000;font-size:clamp(26px,3vw,44px);line-height:1.15;position:absolute;right:5vw;bottom:44px;text-align:right;z-index:3}
+.about{display:grid;grid-template-columns:340px 1fr;gap:50px;align-items:start}
+.photo{border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 0 40px rgba(233,180,92,.25)}
+.photo img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%}
+.photo p{padding:10px 18px;letter-spacing:.2em;font-size:12px;color:var(--gold);border-top:1px solid var(--line)}
+.step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.step i{width:44px;height:44px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);flex:none;font-style:normal}
+.step small{color:var(--mute);display:block}
+.bar{display:grid;grid-template-columns:150px 1fr 44px;gap:12px;align-items:center;margin:11px 0;font-size:14px}
+.bar span:nth-child(2){height:9px;background:rgba(127,127,127,.25);border-radius:9px;overflow:hidden}
+.bar span:nth-child(2) i{display:block;height:100%;background:linear-gradient(90deg,#c88f3c,var(--gold));border-radius:9px}
+.pro p{margin:0 0 14px;font-size:14px}.pro b{display:block;color:var(--ink);font-size:16px}
+.pro small,.card small{color:var(--mute)}
+.pill{display:inline-block;padding:3px 14px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--gold)}
+.job{display:grid;grid-template-columns:1fr auto;gap:8px 20px}
+.job ul{grid-column:1/-1;padding-left:18px;color:var(--mute);font-size:14px}
+.job h3{font-size:24px}
+.ph{height:120px;border:1px dashed var(--line);border-radius:10px;display:grid;place-items:center;color:var(--mute);font-size:13px;margin-bottom:14px}
+form{display:grid;gap:14px}
+input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:13px 14px;color:var(--ink);font:inherit}
+.row{display:flex;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+footer{padding:28px 5vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--gold);font-size:14px}
+
+.btn,.tag,.pill,nav a,.card,.row,.step,.logo,#theme,#menu,footer a,.photo,.bar{transition:transform .3s cubic-bezier(.34,1.7,.5,1),box-shadow .3s,color .2s,background .2s}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ .btn:hover,.tag:hover,.pill:hover,nav a:hover,.logo:hover,footer a:hover{transform:translateY(-6px)}
+ .btn:hover{box-shadow:0 10px 24px rgba(233,180,92,.4)}
+ .card:hover,.photo:hover{transform:translateY(-8px);box-shadow:0 14px 34px rgba(233,180,92,.25)}
+ .row:hover,.step:hover,.bar:hover{transform:translateY(-4px)}
+ #theme:hover,#menu:hover{transform:translateY(-4px) rotate(20deg)}
+ .btn:active,.card:active{transform:translateY(-2px)}
+}
+nav a:hover{color:var(--gold)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media(max-width:900px){
+ nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);padding:16px 5vw;border-bottom:1px solid var(--line)}
+ nav.open{display:flex}#menu{display:block}
+ #home .wrap>div{max-width:none}
+ .ij{grid-template-columns:1fr}.thumb{width:100%;height:180px}
+ .about,.g2,.g3,.g4{grid-template-columns:1fr}
+ #home .banner{width:100%;opacity:.4}.about .photo{max-width:340px}
+ .bar{grid-template-columns:110px 1fr 40px}
+ .tagline{font-size:24px;bottom:20px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* responsive: phones, tablets, laptops, large desktops */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:clip}
+img{max-width:100%}
+header{padding-left:max(5vw,env(safe-area-inset-left));padding-right:max(5vw,env(safe-area-inset-right));padding-top:max(12px,env(safe-area-inset-top))}
+footer{padding-bottom:max(28px,env(safe-area-inset-bottom))}
+#home{min-height:100vh;min-height:100svh}
+@media(min-width:1500px){
+ header,section,footer{padding-left:calc((100vw - 1400px)/2);padding-right:calc((100vw - 1400px)/2)}
+ .wrap{max-width:1400px}
+}
+.sk3{grid-template-columns:1.1fr 1fr 1fr}.ct2{grid-template-columns:1.4fr 1fr}
+@media(max-width:1100px){.g4{grid-template-columns:repeat(2,1fr)}.sk3{grid-template-columns:1fr 1fr}.sk3>:first-child{grid-column:1/-1}}
+@media(max-width:900px){
+ .g4{grid-template-columns:repeat(2,1fr)}.sk3,.ct2{grid-template-columns:1fr}.sk3>:first-child{grid-column:auto}
+ section{padding:96px 5vw 56px}
+ .banner{width:100%!important;opacity:.35}
+ #menu{padding:8px 10px}#theme{padding:8px}
+ #home{flex-direction:column;justify-content:center;align-items:stretch}
+ .tagline{position:static;text-align:left;margin:26px 5vw 0;z-index:3}
+ #home .wrap{padding-bottom:0}
+ .about{gap:28px}
+}
+@media(max-width:560px){
+ .g4,.g2,.g3{grid-template-columns:1fr}
+ .job{grid-template-columns:1fr}
+ .logo{font-size:12px;letter-spacing:.18em;gap:10px}.logo img{width:42px;height:42px}
+ .bar{grid-template-columns:96px 1fr 38px;font-size:13px}
+ .card{padding:18px}
+ .btn{padding:13px 22px}
+ h2{font-size:30px}
+ .tag{margin:12px 6px 0 0}
+ footer{justify-content:center;text-align:center}
+}
+@media(max-width:360px){.logo span,.logo{letter-spacing:.1em}.bar{grid-template-columns:84px 1fr 36px}}
+@media(max-height:480px) and (orientation:landscape){#home{min-height:auto;padding-top:96px;padding-bottom:40px}}
+</style>
+</head>
+<body>
+<canvas id="fx" aria-hidden="true"></canvas>
+<header>
+ <a href="#home" class="logo"><img src="logo.png" alt="Seyed Yousuf Logistics logo">SEYED YOUSUF</a>
+ <nav id="nav">
+  <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#internship">Internship</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a>
+ </nav>
+ <span><button id="theme" aria-label="Toggle theme">☀</button><button id="menu" aria-label="Menu">☰</button></span>
+</header>
+
+<section id="home">
+ <div class="banner"></div>
+ <div class="wrap">
+  <div>
+   <div class="eyebrow">HELLO</div>
+   <h1>SEYED <span class="g">YOUSUF</span></h1>
+   <p class="sub">MBA Finance &amp; Logistics &nbsp;|&nbsp; Supply Chain Management</p>
+   <p class="lead">Aiming to build a career in logistics and supply chain management, contributing to efficient and sustainable global trade.</p>
+   <p style="margin-top:26px"><a class="btn" href="#projects">Explore My Work</a></p>
+   <span class="tag">Logistics</span><span class="tag">Supply Chain</span><span class="tag">Excel</span><span class="tag">Full Stack Development</span>
+  </div>
+ </div>
+ <div class="script tagline">Better<br>Supply Chains<br><span style="color:var(--ink)">A Brighter Future</span></div>
+</section>
+
+<section id="about">
+ <div class="banner"></div>
+ <div class="wrap">
+  <div class="eyebrow">ABOUT ME</div>
+  <h2>The person <span class="g">behind the process.</span></h2>
+  <div class="about">
+   <div class="photo"><img src="about.jpg" alt="Seyed Yousuf"><p>LEARN · BUILD · GROW</p></div>
+   <div>
+    <p class="lead" style="max-width:none">I’m Seyed Yousuf, an MBA student in Finance &amp; Logistics with Supply Chain Management. I’m interested in logistics operations, inventory, procurement, warehousing and distribution, and how technology can improve business workflows.</p>
+    <div class="eyebrow" style="margin-top:34px">MY JOURNEY</div>
+    <div class="step"><i>◆</i><div><b>MBA – Finance &amp; Logistics with Supply Chain Management</b><small>Mohamed Sathak Engineering College, Kilakarai · 2025 – 2027</small></div></div>
+    <div class="step"><i>◆</i><div><b>B.Com – Computer Applications</b><small>Syed Hameedha Arts &amp; Science College, Kilakarai · 2022 – 2025</small><small class="d"><b>Degree:</b> Bachelor of Commerce (B.Com)<br><b>Field of study:</b> Computer Applications<br><b>Grade:</b> CGPA 5.729</small><div class="skl"><span class="pill">Small Business Management</span><span class="pill">Office Automation</span><span class="pill">Customer Relationship Management (CRM)</span><span class="pill">Entrepreneurship</span><span class="pill">Microsoft Office</span></div></div></div>
+    <div class="grid g3" style="margin-top:26px">
+     <div class="card"><b>Operations Mindset</b><br><small>Process · Efficiency · Results</small></div>
+     <div class="card"><b>Business &amp; Finance</b><br><small>Planning · Analysis · Growth</small></div>
+     <div class="card"><b>Technology Skills</b><br><small>Build · Solve · Improve</small></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="banner"></div>
+ <div class="wrap">
+  <div class="eyebrow">MY SKILLS</div>
+  <h2>Skills That Build <span class="g">Better Opportunities</span></h2>
+  <p class="lead">A combination of technical expertise, business knowledge and problem-solving skills that help me contribute effectively to logistics, supply chain and finance-driven roles.</p>
+  <div class="grid g4" style="margin:34px 0 18px">
+   <div class="card"><h3>Office &amp; ERP Tools</h3><small>Excel | Word | PowerPoint<br>Tally ERP 9 | SAP (Learning)</small></div>
+   <div class="card"><h3>Development</h3><small>Java | HTML | CSS | JavaScript<br>Database | Full Stack (Learning)</small></div>
+   <div class="card"><h3>Data &amp; Analytics</h3><small>Excel Formulas | Power BI<br>SQL (Learning)</small></div>
+   <div class="card"><h3>Soft Skills</h3><small>Communication | Teamwork<br>Problem Solving | Leadership</small></div>
+  </div>
+  <div class="grid sk3">
+   <div class="card" id="bars"><h3 class="g" style="margin-bottom:10px">Technical Skills</h3></div>
+   <div class="card pro"><h3 class="g" style="margin-bottom:16px">Professional Skills</h3>
+    <p><b>Logistics &amp; Supply Chain</b><small>Planning | Sourcing | Inventory | Distribution</small></p>
+    <p><b>Financial Management</b><small>Budgeting | Analysis | Reporting</small></p>
+    <p><b>ERP &amp; Accounting</b><small>Tally ERP 9 | SAP (Learning) | MS Office</small></p>
+    <p><b>Problem Solving</b><small>Identify | Analyse | Implement</small></p></div>
+   <div class="card"><h3 class="g" style="margin-bottom:10px">Languages</h3>
+    <div class="bar"><span>Tamil</span><span><i style="width:100%"></i></span><span>100%</span></div>
+    <div class="bar"><span>English</span><span><i style="width:100%"></i></span><span>100%</span></div>
+    <h3 class="g" style="margin:24px 0 12px">Certifications &amp; Training</h3>
+    <p class="pro"><b>Java Full Stack Web Development</b><small>Magizhchi Tech Academy (3 Months)</small></p>
+    <p class="pro"><b>DCA – Computer Software Education</b><small>MS Office, Internet, Tally ERP 9 with GST (A Grade)</small></p>
+    <p class="pro"><b>Junior Typewriting</b><small>Government Exam (First Class)</small></p></div>
+  </div>
+  <p style="margin-top:26px"><a class="btn o" href="Seyed_Yousuf_Resume.docx" download>Download Resume</a></p>
+ </div>
+</section>
+
+<section id="projects">
+ <div class="wrap">
+  <div class="eyebrow">PROJECTS</div>
+  <h2>Things I’ve <span class="g">built.</span></h2>
+  <p class="lead">A few web projects I built while learning full stack development.</p>
+  <div class="grid g3" style="margin-top:30px">
+   <div class="card"><img loading="lazy" class="shot c" src="p1.jpg" alt="Personal intro page"><h3>Personal Intro Page</h3><small>Responsive landing page with an intro and project button</small></div>
+   <div class="card"><img loading="lazy" class="shot" src="p2.jpg" alt="Elite Archive"><h3>Elite Archive</h3><small>Product landing page for a luxury footwear store</small></div>
+   <div class="card"><img loading="lazy" class="shot c" src="p3.png" alt="To-Do App"><h3>To-Do App</h3><small>Add and delete tasks</small></div>
+  </div>
+ </div>
+</section>
+
+<section id="internship">
+ <div class="banner"></div>
+ <div class="wrap">
+  <div class="eyebrow">INTERNSHIP &amp; EXPERIENCE</div>
+  <h2>Learn, Gain Experience, <span class="g">Build My Future.</span></h2>
+  <p class="lead">These internships helped me gain hands-on exposure, build practical skills and understand real-world operations.</p>
+  <div class="grid g2" style="margin-top:34px">
+   <div class="card ij"><img loading="lazy" class="thumb" src="rice.jpg" alt="Rice"><div class="job">
+    <div><span class="pill">INTERNSHIP</span><h3 style="margin-top:8px">Sukan Rice Industries</h3><small>Chinthamani, Madurai · 4 Weeks (1 Month) · Manufacturing Sector</small></div><span class="pill">2026 · Completed</span>
+    <p style="grid-column:1/-1;color:var(--mute);font-size:14px">Gained exposure to production, purchase, marketing, HR and accounts departments. Learned about paddy procurement, rice production, storage and distribution processes.</p>
+    <ul><li>Understood the complete workflow of a rice manufacturing unit.</li><li>Observed real-time operations in production, purchase and marketing.</li><li>Prepared a detailed internship report with SWOT analysis.</li></ul>
+   </div></div>
+   <div class="card ij"><img loading="lazy" class="thumb" src="code.jpg" alt="Coding"><div class="job">
+    <div><span class="pill">INTERNSHIP</span><h3 style="margin-top:8px">Saiket Systems</h3><small>Remote · 1 Month (Full Stack Development Internship)</small></div><span class="pill">2026 · Completed</span>
+    <p style="grid-column:1/-1;color:var(--mute);font-size:14px">Worked on 5 real projects, gaining practical experience in web development. Learned and applied front-end and back-end technologies with modern tools and frameworks.</p>
+    <ul><li>Developed multiple websites using HTML, CSS, JavaScript, Node.js, Express.</li><li>Worked with databases and backend technologies.</li><li>Gained hands-on experience in real project development and problem-solving.</li></ul>
+   </div></div>
+  </div>
+ </div>
+</section>
+
+<section id="certificates">
+ <div class="banner"></div>
+ <div class="wrap">
+  <div class="eyebrow">CERTIFICATES &amp; ACHIEVEMENTS</div>
+  <h2>My Certifications, <span class="g">Training &amp; Achievements.</span></h2>
+  <div class="grid g4" style="margin-top:30px">
+   <div class="card"><h3>Java Full Stack Web Development</h3><small>Magizhchi Tech Academy, Ramnad<br>Mar 2025 – Jun 2025 | 3 Months</small></div>
+   <div class="card"><h3>DCA (MS Office, Internet, Tally ERP 9 with GST)</h3><small>Computer Software Education<br>A Grade | 2024</small></div>
+   <div class="card"><h3>Junior Typewriting</h3><small>Government Exam<br>First Class | 2023</small></div>
+   <div class="card"><h3>Tally ERP 9 with GST</h3><small>Computer Software Education<br>A Grade | 2024</small></div>
+  </div>
+  <h3 class="g" style="margin:40px 0 16px">Achievements</h3>
+  <div class="grid g4">
+   <div class="card"><b>Completed Java Full Stack Training</b><br><small>Built real-time projects and solved 100+ coding problems. 2025</small></div>
+   <div class="card"><b>DCA Certification</b><br><small>Practical knowledge in MS Office, Internet, Tally ERP 9 with GST. 2024</small></div>
+   <div class="card"><b>Typewriting – First Class</b><br><small>First Class in Junior Typewriting Examination. 2023</small></div>
+   <div class="card"><b>Continuous Learning</b><br><small>Upgrading skills for a better future in Logistics &amp; Supply Chain. Ongoing</small></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="banner"></div>
+ <div class="wrap">
+  <div class="eyebrow">GET IN TOUCH</div>
+  <h2>Let’s Connect <span class="g">&amp; Build Something Great.</span></h2>
+  <p class="lead">I’m always open to new opportunities, collaborations and meaningful conversations. Whether you have a job opportunity, internship offer, project idea or just want to say hello, feel free to reach out.</p>
+  <div class="grid ct2" style="margin-top:34px">
+   <div class="card">
+    <h3 class="g" style="margin-bottom:16px">Send me a message</h3>
+    <form id="f">
+     <div class="grid g2"><input id="n" placeholder="Full name" required><input id="e" type="email" placeholder="your.email@example.com" required></div>
+     <select id="s"><option>Job Opportunity</option><option>Internship</option><option>Project Idea</option><option>Just Saying Hello</option></select>
+     <textarea id="m" rows="5" placeholder="Write your message here..." required></textarea>
+     <button class="btn" style="justify-self:start">Send Message</button>
+    </form>
+   </div>
+   <div class="card">
+    <h3 class="g" style="margin-bottom:8px">Contact Information</h3>
+    <div class="row"><div><b>Phone</b><br><small>+91 90255 88939 (Call / WhatsApp)</small></div></div>
+    <div class="row"><div><b>Email</b><br><a href="mailto:seyedyousuf19@gmail.com"><small>seyedyousuf19@gmail.com</small></a></div></div>
+    <div class="row"><div><b>Location</b><br><small>Kilakarai, Ramanathapuram, Tamil Nadu, India</small></div></div>
+    <div class="row"><div><b>Availability</b><br><small>Mon – Sat | 9:00 AM – 6:00 PM (IST)</small></div></div>
+    <div class="row"><div><b>LinkedIn</b><br><a href="https://linkedin.com/in/yousuf06" target="_blank" rel="noopener"><small>linkedin.com/in/yousuf06</small></a></div></div>
+    <div class="row" style="border:0"><div><b>GitHub</b><br><a href="https://github.com/seyedyousuf20-sketch" target="_blank" rel="noopener"><small>seyedyousuf20-sketch</small></a></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer><span class="logo"><img src="logo.png" alt="Seyed Yousuf Logistics logo">SEYED YOUSUF</span><span>Keep Learning / Keep Growing / Keep Moving</span><a href="#home">↑ Back to top</a></footer>
+
+<script>
+const tech=[["MS Excel",80],["Java (Core + OOPs)",70],["HTML & CSS",75],["JavaScript",60],["React (Learning)",50],["Node.js & Express (Learning)",45],["SQL & PostgreSQL",55],["MongoDB (Learning)",40],["Spring Boot (Learning)",35]];
+document.getElementById('bars').insertAdjacentHTML('beforeend',tech.map(t=>`<div class="bar"><span>${t[0]}</span><span><i style="width:${t[1]}%"></i></span><span>${t[1]}%</span></div>`).join(''));
+const root=document.documentElement,th=document.getElementById('theme');
+try{if(localStorage.th)root.dataset.theme=localStorage.th}catch(e){}
+th.onclick=()=>{root.dataset.theme=root.dataset.theme==='light'?'dark':'light';try{localStorage.th=root.dataset.theme}catch(e){}};
+const nav=document.getElementById('nav');
+document.getElementById('menu').onclick=()=>nav.classList.toggle('open');
+nav.onclick=()=>nav.classList.remove('open');
+const links=[...nav.querySelectorAll('a')];
+new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.hash==='#'+x.target.id))}),{rootMargin:'-45% 0px -50% 0px'}).observe&&document.querySelectorAll('section').forEach(s=>new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.hash==='#'+x.target.id))}),{rootMargin:'-45% 0px -50% 0px'}).observe(s));
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const v=id=>document.getElementById(id).value;
+ location.href='mailto:seyedyousuf19@gmail.com?subject='+encodeURIComponent(v('s')+' - '+v('n'))+'&body='+encodeURIComponent(v('m')+'\n\nFrom: '+v('n')+' ('+v('e')+')')};
+
+(()=>{const c=document.getElementById('fx'),x=c.getContext('2d');let W,H,mx=0,my=0,t=0,sx=0,sy=0;
+const rs=()=>{const d=Math.min(devicePixelRatio||1,innerWidth<700?1.5:2);c.width=innerWidth*d;c.height=innerHeight*d;x.setTransform(d,0,0,d,0,0);W=innerWidth;H=innerHeight};rs();addEventListener('resize',rs);
+addEventListener('mousemove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+const V=[[-1,-.5,-.5],[1,-.5,-.5],[1,.5,-.5],[-1,.5,-.5],[-1,-.5,.5],[1,-.5,.5],[1,.5,.5],[-1,.5,.5]];
+const E=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];
+const F=[[0,1,2,3],[4,5,6,7],[0,1,5,4],[2,3,7,6],[1,2,6,5],[0,3,7,4]];
+const cols=['138,75,42','47,74,99','163,122,44','91,47,42','61,90,74'],R=Math.random;
+const B=Array.from({length:16},(_,i)=>({x:(R()-.5)*16,y:(R()-.5)*8,z:R()*14+2,s:.6+R()*.7,a:R()*6,b:R()*6,va:(R()-.5)*.012,vb:(R()-.5)*.014,vz:.004+R()*.006,c:cols[i%5]}));
+function draw(){const g=document.documentElement.dataset.theme==='light'?'168,116,26':'233,180,92',f=H*.9;
+ sx+=(mx-sx)*.05;sy+=(my-sy)*.05;x.clearRect(0,0,W,H);
+ const P=(px,py,pz)=>[W/2+px/pz*f-sx*90,H*.5+py/pz*f-sy*60];
+ x.lineWidth=1;
+ for(let k=0;k<26;k++){const z=1.2+(k-(t*.012)%1)*.9,y=P(0,2,z)[1],a=Math.max(0,.28-z*.011);x.strokeStyle=`rgba(${g},${a})`;x.beginPath();x.moveTo(0,y);x.lineTo(W,y);x.stroke()}
+ for(let i=-12;i<=12;i++){const p=P(i*1.2,2,1.2),q=P(i*1.2,2,24);const gr=x.createLinearGradient(0,p[1],0,q[1]);gr.addColorStop(0,`rgba(${g},.25)`);gr.addColorStop(1,`rgba(${g},0)`);x.strokeStyle=gr;x.beginPath();x.moveTo(p[0],p[1]);x.lineTo(q[0],q[1]);x.stroke()}
+ B.slice(0,innerWidth<700?8:16).forEach(o=>{o.a+=o.va;o.b+=o.vb;o.z-=o.vz;if(o.z<1.6){o.z=16;o.x=(R()-.5)*16;o.y=(R()-.5)*8}
+  const ca=Math.cos(o.a),sa=Math.sin(o.a),cb=Math.cos(o.b),sb=Math.sin(o.b);
+  const pts=V.map(v=>{let X=v[0]*o.s*1.6,Y=v[1]*o.s,Z=v[2]*o.s;let x1=X*ca+Z*sa,z1=-X*sa+Z*ca,y1=Y*cb-z1*sb,z2=Y*sb+z1*cb;return P(o.x+x1,o.y+y1,o.z+z2)});
+  const al=Math.min(1,(16-o.z)/4,o.z-1.6)*.5;
+  F.forEach(fc=>{x.fillStyle=`rgba(${o.c},${al*.25})`;x.beginPath();fc.forEach((i,j)=>j?x.lineTo(...pts[i]):x.moveTo(...pts[i]));x.closePath();x.fill()});
+  x.strokeStyle=`rgba(${g},${al})`;x.beginPath();E.forEach(e=>{x.moveTo(...pts[e[0]]);x.lineTo(...pts[e[1]])});x.stroke()});
+}
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+(function loop(){t++;draw();if(!rm)requestAnimationFrame(loop)})();})();
+</script>
+</body>
+</html>
